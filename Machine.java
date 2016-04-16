@@ -97,37 +97,22 @@ public class Machine
     public void finishScan()
     {
         System.out.println("Your transaction");
-        if (item1 != null)
-        {
-            System.out.println(ItemTable.getName(item1) + "\t\t$" + ItemTable.getPrice(item1));
-        }
-
-        if (item2 != null)
-        {
-            System.out.println(ItemTable.getName(item2) + "\t\t$" + ItemTable.getPrice(item2));
-        }
-
-        if (item3 != null)
-        {
-            System.out.println(ItemTable.getName(item3) + "\t\t$" + ItemTable.getPrice(item3));
-        }
-
-        if (item4 != null)
-        {
-            System.out.println(ItemTable.getName(item4) + "\t\t$" + ItemTable.getPrice(item4));
-        }
-
-        if (item5 != null)
-        {
-            System.out.println(ItemTable.getName(item5) + "\t\t$" + ItemTable.getPrice(item5));
-        }
-
-        if (item6 != null)
-        {
-            System.out.println(ItemTable.getName(item6) + "\t\t$" + ItemTable.getPrice(item6));
-        }
-        System.out.printf("Final Balance:\t$%.2f ($%.2f before your %.2f%% discount)\n", getBalance() * (1 - discount), getBalance(), discount * 100);
+        printItem(item1);
+        printItem(item2);
+        printItem(item3);
+        printItem(item4);
+        printItem(item5);
+        printItem(item6);
+        System.out.printf("%-16s$%.2f ($%.2f before your %.2f%% discount)\n", "Final Balance:", getBalance() * (1 - discount), getBalance(), discount * 100);
         clearItems();
+    }
+
+    public void printItem(Item item)
+    {
+        if (item != null)
+        {
+            System.out.printf("%-16s$%.2f\n", ItemTable.getName(item), ItemTable.getPrice(item));
+        }
     }
 
     public void removeLastItem()
