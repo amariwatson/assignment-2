@@ -41,7 +41,7 @@ public class ItemTable
         }
         else if (barcode.equals(barcode4))
         {
-            name = "Milo";
+            name = "Chocolate";
         }
         else if (barcode.equals(barcode5))
         {
@@ -61,11 +61,11 @@ public class ItemTable
         }
         else if (barcode.equals(barcode9))
         {
-            name = "Tea";
+            name = "Hot Dogs";
         }
         else if (barcode.equals(barcode10))
         {
-            name = "Pepsi";
+            name = "Pepsi Max";
         }
         else
         {
@@ -84,7 +84,7 @@ public class ItemTable
         }
         else if (barcode.equals(barcode2))
         {
-            price = 10.65;
+            price = 9.65;
         }
         else if (barcode.equals(barcode3))
         {
